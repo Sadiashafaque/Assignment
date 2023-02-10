@@ -1,7 +1,7 @@
 from solution import GraduationCeremony
 
 if __name__ == "__main__":
-    n = int(input("enter No. of days: \n"))
+    n = int(input("Enter the number of days: \n"))
     m = 4
     if n < 0 or m < 0:
         raise Exception("Invalid Inputs")
