@@ -23,10 +23,10 @@ class GraduationCeremony:
             return ans
 
         
-        dp = [[-1] * (self.m + 1) for _ in range(self.n + 1)]
-        recursiveFunc(self.n - 1, self.m -1, self.m -1, dp)  # total number of valid way to attend classes
-        x1 = dp[self.n -1][self.m - 1]
-        x2 = dp[self.n -2][self.m - 2]
+        dp = [[-1] * (self.m + 1) for _ in range(self.n + 1)] # a matrix to store the function calls
+        recursiveFunc(self.n - 1, self.m -1, self.m -1, dp)  # recursive call to know total valid pemutations from n days
+        x1 = dp[self.n -1][self.m - 1] # this tells the number of ways to attend class for given constraints
+        x2 = dp[self.n -2][self.m - 2] # this tells those permutations in which last days was absent
         print("The number of ways to attend classes over {} days is: {}".format(self.n,x1))
         print("The probability of missing graduation ceremony is {}/{} ".format(x2,x1))
 
