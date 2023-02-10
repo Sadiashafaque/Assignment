@@ -15,9 +15,9 @@ class GraduationCeremony:
                 return dp[i][ml]
             ans=0
             if ml>0:
-                ans = ans + rec(i-1,ml-1,ma,dp)
+                ans = ans + recursiveFunc(i-1,ml-1,ma,dp)
             
-            ans = ans + rec(i-1,ma,ma,dp)
+            ans = ans + recursiveFunc(i-1,ma,ma,dp)
             dp[i][ml] = ans;           
 
             return ans
